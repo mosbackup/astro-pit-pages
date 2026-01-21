@@ -40,9 +40,10 @@ export const Footer = () => {
   return (
     <footer className="border-t border-border bg-card/50">
       <div className="container mx-auto px-4 py-16">
-        {/* Newsletter Section */}
-        <div className="mb-16 rounded-2xl border border-border bg-secondary/30 p-8 md:p-12">
-          <div className="mx-auto max-w-2xl text-center">
+        {/* Newsletter & Contact Section */}
+        <div className="mb-16 grid gap-8 lg:grid-cols-2">
+          {/* Newsletter */}
+          <div className="rounded-2xl border border-border bg-secondary/30 p-8">
             <h3 className="mb-4 text-2xl font-bold">Stay Updated</h3>
             <p className="mb-6 text-muted-foreground">
               Get the latest research updates, product news, and insights on financial AI 
@@ -56,6 +57,36 @@ export const Footer = () => {
               />
               <Button className="bg-primary hover:bg-primary/90">Subscribe</Button>
             </form>
+          </div>
+
+          {/* Contact & Map */}
+          <div className="rounded-2xl border border-border bg-secondary/30 p-8">
+            <h3 className="mb-4 text-2xl font-bold">Contact Us</h3>
+            <div className="mb-4 space-y-2">
+              <p className="text-muted-foreground">
+                1 Sansome St, Suite 1400<br />
+                San Francisco, CA 94104
+              </p>
+              <a 
+                href="mailto:info@pitinference.com" 
+                className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+              >
+                <Mail className="h-4 w-4" />
+                info@pitinference.com
+              </a>
+            </div>
+            <div className="aspect-video w-full overflow-hidden rounded-lg border border-border">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.8076654668447!2d-122.40185492392815!3d37.79011841189651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808900f5e169%3A0x5f7e3a2e4b8b7d8a!2s1%20Sansome%20St%2C%20San%20Francisco%2C%20CA%2094104!5e0!3m2!1sen!2sus!4v1705689600000!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="PiT-Inference Office Location"
+              />
+            </div>
           </div>
         </div>
 
